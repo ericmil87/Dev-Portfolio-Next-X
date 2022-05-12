@@ -1,6 +1,6 @@
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import { GiTie } from "react-icons/gi";
-import { GoLocation } from "react-icons/go";
+import { FaWhatsapp } from "react-icons/fa";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
@@ -23,7 +23,7 @@ const Sidebar = () => {
         quality="100"
       />
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
-        <span className="text-green ">Sumit</span> Dey
+        <span className="text-green ">Eric</span> Milfont
       </h3>
       <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200 dark:bg-black-500">
         Web Developer
@@ -53,27 +53,27 @@ const Sidebar = () => {
 
       {/* Contacts */}
       <div
-        className="py-4 my-5 bg-gray-200 dark:bg-dark-200 dark:bg-black-500"
+        className="py-4 my-5 bg-gray-200 dark:bg-dark-200 dark:bg-black-500  "
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
-        <div className="flex items-center justify-center">
-          <GoLocation className="mr-2" /> <span>Kolkata,India </span>
-        </div>
-        <p className="my-2 "> code.sumax@gmail.com </p>
-        <p className="my-2"> 8514961665 / 8640960375 </p>
+        <div className="grid place-items-center w-full  ">
+          <span >Porto de Galinhas, PE<br/>Brazil </span>
+        
+        <p className="my-2 "> eric@milfont.net </p>
+        <p className="my-2 flex text-black"> +55 81 98139.2929 <FaWhatsapp className="mt-1/2 ml-2"  /></p></div>
       </div>
 
       {/* Email Button */}
 
       <button
-        className="w-8/12 px-5 py-2 text-white bg-black rounded-full cursor-pointer bg-gradient-to-r from-green to-blue-500 hover:scale-105 focus:outline-none"
-        onClick={() => window.open("mailto:code.sumax@gmail.com")}
+        className="w-8/12 px-5 py-2 text-white bg-black rounded-full cursor-pointer bg-gradient-to-r from-green to-green-dark hover:scale-105 focus:outline-none"
+        onClick={() => window.open("mailto:eric@milfont.net")}
       >
         Email me
       </button>
       <button
         onClick={changeTheme}
-        className="w-8/12 px-5 py-2 my-4 text-white bg-black rounded-full cursor-pointer bg-gradient-to-r from-green to-blue-500 focus:outline-none hover:scale-105 "
+        className="w-8/12 px-5 py-2 my-4 text-white bg-black rounded-full cursor-pointer bg-gradient-to-r from-green to-green-dark focus:outline-none hover:scale-105 "
       >
         {/* //TODO remove bg black */}
         Toggle Theme

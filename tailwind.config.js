@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   darkMode: "class",
@@ -14,7 +16,8 @@ module.exports = {
     extend: {
       colors: {
         green: {
-          DEFAULT: "#00f260",
+          DEFAULT: "#0c4a6e",
+          dark: "#164e63"
         },
         dark: {
           DEFAULT: "#010101",
@@ -24,6 +27,8 @@ module.exports = {
           500: "#0f1115",
           700: "#202125",
         },
+        sky: colors.sky,
+        cyan: colors.cyan,
       },
     },
   },
