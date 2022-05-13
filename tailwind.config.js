@@ -1,12 +1,12 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+  content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
   darkMode: "class",
   theme: {
     fontFamily: {
       sans: ["ui-sans-serif", "system-ui"],
-      kaushan: ["Kaushan Script"],
+      ubuntu: ["Ubuntu"],
     },
     boxShadow: {
       "custom-light": " 0 0 10px #313131",
@@ -14,11 +14,13 @@ module.exports = {
     },
 
     extend: {
+      backdropBlur: {
+        xl: '5px',
+      },
       colors: {
         green: {
-          DEFAULT: "#0c4a6e",
-          dark: "#164e63"
-        },
+          DEFAULT: colors.sky.DEFAULT,
+        }, 
         dark: {
           DEFAULT: "#010101",
           100: "#0a0b0e",

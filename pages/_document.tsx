@@ -7,11 +7,11 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-fixed bg-gradient-to-r from-sky-900 to-cyan-900 dark:from-dark-500 dark:to-dark-700 dark:text-white background-animate">
+        <body className="bg-fixed bg-gradient-to-r from-sky-900 to-cyan-900 dark:from-dark-500 dark:to-dark-700 dark:text-white background-animate 	">
           <ul className="circles">
                       <li key="1"></li>
                       <li key="2"></li>
