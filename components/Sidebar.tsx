@@ -48,7 +48,7 @@ const Sidebar = () => {
               <div className="absolute whitespace-nowrap w-full inset-0 font-extralight text-xl text-gray-900 dark:text-white -ml-7 mt-px animate-pulse opacity-75"><div className="hidden dark:inline"><BsMoonFill /></div>
               </div>
               <input type="checkbox" name="toggle" id="toggle" onChange={changeTheme} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white  appearance-none cursor-pointer" checked={(theme === "light" ? true : false)}  />
-              <label for="toggle" className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-400 cursor-pointer"></label>
+              <label htmlFor="toggle" className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-400 cursor-pointer"></label>
               <div className="absolute whitespace-nowrap w-full inset-0 font-extralight text-xl text-gray-900 dark:text-white ml-12 animate-pulse opacity-75"><div className="dark:hidden"><BsSunFill /></div>
               </div>
             </div>
