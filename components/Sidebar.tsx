@@ -1,100 +1,104 @@
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
-import { GiTie } from "react-icons/gi";
+import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
+
+
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
+  
 
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
+    
   };
-
+  
+  
+  
   return (
     <>
-    <div className="container w-full h-300 " >
-      <Image
-        src="/images/eric-hero.jpg"
-        alt="avatar"
-        className=" mx-auto border rounded-t-md object-cover "
-        height="512px"
-        width="512px"
-        layout="intrinsic"
-        quality="100"
-      />
+      <div className="container w-full h-300 animate-in fade-in zoom-in duration-1000 delay-0.5s fill-mode-backwards " >
+        <Image
+          src="/images/eric-hero.jpg"
+          alt="avatar"
+          className=" mx-auto border rounded-t-md object-cover "
+          height="512px"
+          width="512px"
+          layout="intrinsic"
+          quality="100"
+        />
       </div>
-      <h3 className=" text-3xl font-medium tracking-wider font-ubuntu">
-         <span className="text-sky-100">Eric Milfont</span><br />
-         <span className="text-green-300 text-sm">Online</span>
-      </h3>
-      <div className="container">
-        <a href="#" className="inline-flex mx-5 items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Read more
-              <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
-        <a href="#" className="inline-flex mx-5 items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Read more
-              <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
-        <a href="#" className="inline-flex mx-5 items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Read more
-              <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
+      <div className="bg-sky-900 -mt-1.5 py-2 filter backdrop-blur-xl bg-opacity-60 animate-in slide-in-from-bottom fade-in  duration-1000 delay-1s fill-mode-backwards" >
+        <h3 className=" text-3xl font-medium tracking-wider font-ubuntu ">
+          <span className="text-sky-100">Eric Milfont</span>
+        </h3>
+        <h3 className=" text-lg tracking-wider font-extralight">
+          <span className="text-sky-100 ">Full Stack Web Developer</span>
+        </h3>
+        <h3 className=" text-sm tracking-widest font-ubuntu">
+          <span className="text-green-300">Online</span>
+        </h3>
       </div>
-      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-dark-200 dark:bg-black-500">
-        Web Developer
-      </p>
-      {/* Resume */}
-      <a
-        href="/assets/Sumit Dey Resume.pdf"
-        download="Sumit Dey Resume.pdf"
-        className="flex items-center justify-center px-2 py-1 my-2 bg-gray-200 rounded-full cursor-pointer dark:bg-dark-200 dark:bg-black-500"
-      >
-        <GiTie className="w-6 h-6" />
-        <span>Download Resume</span>
-      </a>
-
-      {/* Socials */}
-      <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full ">
-        <a href="https://www.youtube.com/channel/UClW8d1f5m0QAE_Ig024EP6A">
-          <AiFillYoutube className="w-8 h-8 cursor-pointer" />
-        </a>
-        <a href="https://www.linkedin.com/in/sumit-dey-4a04431a9/" >
-          <AiFillLinkedin className="w-8 h-8 cursor-pointer" />
-        </a>
-        <a href="https://www.instagram.com/_sumax__/">
-          <AiFillGithub className="w-8 h-8 cursor-pointer" />{" "}
-        </a>
-      </div>
-
-      {/* Contacts */}
-      <div
-        className="py-4 my-5 bg-gray-200 dark:bg-dark-200 dark:bg-black-500  "
+      <div className="container mt-3  animate-in slide-in-from-bottom fade-in duration-1000 delay-1.5s fill-mode-backwards">
+        <div className="flex justify-center ">
         
-      >
-        <div className="grid place-items-center w-full  ">
-          <span >Porto de Galinhas, PE<br/>Brazil </span>
+            <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+              <div className="absolute whitespace-nowrap w-full inset-0 font-extralight text-xl text-gray-900 dark:text-white -ml-7 mt-px animate-pulse opacity-75"><div className="hidden dark:inline"><BsMoonFill /></div>
+              </div>
+              <input type="checkbox" name="toggle" id="toggle" onChange={changeTheme} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white  appearance-none cursor-pointer" checked={(theme === "light" ? true : false)}  />
+              <label for="toggle" className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-400 cursor-pointer"></label>
+              <div className="absolute whitespace-nowrap w-full inset-0 font-extralight text-xl text-gray-900 dark:text-white ml-12 animate-pulse opacity-75"><div className="dark:hidden"><BsSunFill /></div>
+              </div>
+            </div>
         
-        <p className="my-2 "> eric@milfont.net </p>
-        <p className="my-2 flex text-black"> +55 81 98139.2929 <FaWhatsapp className="mt-1/2 ml-2"  /></p></div>
+        </div>
+      </div> 
+      <div className="container -mt-3 animate-in slide-in-from-bottom zoom-in duration-1000 delay-2s fill-mode-backwards "> 
+        <div className="container my-10 uppercase text-lg">
+        
+          <a href="#_" className="relative px-12 py-4 tracking-wider text-white rounded-lg group ">
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-500 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
+            <span className="relative">Hire now!</span>
+          </a>
+        </div>
+        
+        
+        
+        <div className="container my-10 uppercase ">
+          <a href="#_" className="relative px-11 py-4 tracking-wider text-white rounded-lg group">
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-700 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
+            <span className="relative">Contact me</span>
+          </a>
+        </div>
+        <div className="container my-10 uppercase ">
+          <a href="#_" className="relative px-16 py-4 tracking-wider text-white rounded-lg group">
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-700 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
+            <span className="relative">Resume</span>
+          </a>
+        </div>
+        <div className="container my-10 uppercase ">
+          <a href="#_" className="relative px-14 py-4 tracking-wider text-white rounded-lg group">
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-700 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
+            <span className="relative">Projects</span>
+          </a>
+        </div>
+        <div className="container my-10 uppercase ">
+          <a href="#_" className="relative px-20 py-4 tracking-wider text-white rounded-lg group">
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
+            <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-700 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
+            <span className="relative ">Blog</span>
+          </a>
+        </div>
       </div>
+      
 
-      {/* Email Button */}
 
-      <button
-        className="w-8/12 px-5 py-2 text-white bg-black rounded-full cursor-pointer bg-gradient-to-r from-green to-green-dark hover:scale-105 focus:outline-none"
-        onClick={() => window.open("mailto:eric@milfont.net")}
-      >
-        Email me
-      </button>
-      <button
-        onClick={changeTheme}
-        className="w-8/12 px-5 py-2 my-4 text-white bg-black rounded-full cursor-pointer bg-gradient-to-r from-green to-green-dark focus:outline-none hover:scale-105 "
-      >
-        {/* //TODO remove bg black */}
-        Toggle Theme
-      </button>
     </>
   );
 };

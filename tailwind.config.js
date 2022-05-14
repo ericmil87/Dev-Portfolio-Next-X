@@ -14,6 +14,16 @@ module.exports = {
     },
 
     extend: {
+      animationDelay: {
+        "0.5s": "0.5s",
+        "1s": "1s",
+        "1.5s": "1.5s",
+        "2s": "2s",
+        "2.5s": "2.5s",
+        "3s": "3s",
+				"4s": "4s",
+
+			},
       backdropBlur: {
         xl: '5px',
       },
@@ -39,5 +49,9 @@ module.exports = {
       boxShadow: ["dark"],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    require("tailwindcss-animate"),
+  ],
 };
