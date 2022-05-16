@@ -13,16 +13,21 @@ const About: NextPage = () => {
   // console.log(services);
 
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1 ">
+    <div className="flex flex-col flex-grow px-6 pt-1 bg-gray-400 dark:bg-dark-100 filter bg-opacity-50 ">
       <h6 className="my-3 text-base font-medium">
-        I am currently pursuing B.Tech Degree(Final Year) in Computer Science
-        Engineering from Academy of Technology. I have 3+ years of experience in
-        Web Development and I have a Youtube Channel where I teach Full Stack
-        Web Development
+        Over 20 years of experience working on Web Developement.
       </h6>
+      <p className="my-3 h-full w-full text-base font-medium">
+      I can develop and guarantee the high availability in the cloud of digital products, as well as I know Digital Marketing and how to set up digital campaigns, create and manage ads, sales funnels, etc.
+      <br/>
+      I love to innovate and think “outside the box”. I founded more than 3 startups that received several awards and investments.
+      <br/>
+      I have been leading digital projects for over a decade, working with in-office or home-office teams around the world that way I am able to escale and manage your IT team and Projects.
+      </p>
+      
       <div
-        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100 "
-        style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
+        className="flex-grow p-4 mt-5 -mx-6  "
+      
       >
         <h4 className="my-3 text-xl font-semibold tracking-wide">
           What I am doing
@@ -32,7 +37,7 @@ const About: NextPage = () => {
           {/* children's initial and animate property should be same as the parent during a stagger effect  */}
           {services.map((service) => (
             <div
-              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "
+              className="col-span-2 p-2 bg-sky-900 text-white rounded-lg dark:bg-dark-200 md:col-span-1 "
               key={service.title}
             >
               <ServiceCard service={service} />

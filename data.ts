@@ -11,36 +11,36 @@ export const services: Service[] = [
     Icon: RiComputerLine,
     title: "Frontend Development",
     about:
-      "I can build a beautiful and scalable SPA using <b> HTML</b>,<b>CSS</b>   and <b>React.js</b> ",
+      "I can build a beautiful and scalable serverless Website or WebApp(SPA) using <b> NEXT.JS, HTML</b>,<b>CSS</b> and <b>MySQL, MongoDB or any cloud database of your choice. </b> ",
   },
   {
     Icon: FaServer,
-    title: "Backend  Development",
+    title: "Backend Development",
     about:
-      "handle database, server, api using <b>Express </b> & other popular frameworks",
+      "Create and optimize your Database, Server or RESTFul API",
   },
   {
     Icon: AiOutlineApi,
-    title: "API Development",
+    title: "Website Development",
     about:
-      "I can develop robust  REST API using <b>django-rest-api</b>  & <b>Node API</b> ",
+      "I will develop your beautiful and scalable website with any feature you want like e-commerce, booking, sign up, event or blog.",
   },
   {
     Icon: MdDeveloperMode,
-    title: "Competitive Coder",
-    about: "a daily problem solver in <b>HackerRank</b>  and <b>Leet Code</b> ",
+    title: "Linux Server Administration",
+    about: "I can manage, secure, optimize and mantain your Linux Server and your App/Sites on it.",
   },
   {
     Icon: AiOutlineAntDesign,
-    title: "UI/UX designer",
+    title: "Branding and Web Designer",
     about:
-      "stunning user interface designer using <b>Figma</b>  and  <b>Framer</b> ",
+      "I work with excellent designers to delivery you any kind of digital art you need. Including Websites design, Logo, E-mail signatures and more.",
   },
   {
     Icon: RiComputerLine,
-    title: "Whatever",
+    title: "20+ Years of Experience",
     about:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis minima autem!",
+      "Born on 1987, I've been working with development since I was 10 years old. I have tons of experience with programming and I.T. in general. I would love to hear about your project.",
   },
 ];
 

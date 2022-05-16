@@ -50,8 +50,8 @@ body {
    overflow: hidden;
    z-index: -10;
 }
-
-.circles li{
+/*TODO ACTIVATE ANIMATION*/
+.unactive_circles li{
    position: absolute;
    display: block;
    list-style: none;

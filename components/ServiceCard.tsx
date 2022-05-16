@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react'
 import { Service } from '../types'
-// import { motion } from 'framer-motion'
+
 
 const ServiceCard: FunctionComponent<{ service: Service }> = ({
    service: { Icon, title, about },
@@ -13,12 +13,15 @@ const ServiceCard: FunctionComponent<{ service: Service }> = ({
    }
 
    return (
-      <div className='flex items-center p-2 space-x-4 '>
-         <Icon className='w-12 h-12 text-green' />
+      <div className='flex items-center h-full justify-left p-2 space-x-4 '>
+         <div className='container h-14 w-14'>
+            <Icon className='h-full w-14 text-sky-500' />
+         </div>
          <div className=''>
             <h6 className='font-bold'>{title}</h6>
             <p dangerouslySetInnerHTML={createMarkup()} />
          </div>
+         
       </div>
    )
 }
