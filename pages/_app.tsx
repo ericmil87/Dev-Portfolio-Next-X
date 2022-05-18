@@ -15,11 +15,11 @@ function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     const handleRouteStart = () => {
                                     NProgress.start();
-                                    console.log('NP.handleRouteStart: '+ router.pathname);
+                                    //console.log('NP.handleRouteStart: '+ router.pathname);
     }
     const handleRouteDone = () => {
                                     NProgress.done();
-                                    console.log('NP.handleRouteDone: '+ router.pathname);
+                                   // console.log('NP.handleRouteDone: '+ router.pathname);
     }
 
     Router.events.on("routeChangeStart", handleRouteStart);
