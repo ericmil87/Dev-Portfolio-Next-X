@@ -22,8 +22,10 @@ const NavItem: FunctionComponent<{
       </Link>
    ) : null
 }
-
-const Navbar = ({router}) => {
+/*interface NavbarProps {
+   router: Router;
+ }*/
+const Navbar = ({router}:any) => {
    //const router = useRouter();
 
    const [active, setActive] : any = useState('');

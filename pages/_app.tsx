@@ -6,11 +6,11 @@ import "../styles/nprogress.css";
 
 
 import { ThemeProvider } from "next-themes";
-import { useEffect, useState } from "react";
-import { Router, useRouter, withRouter } from "next/router";
+import { useEffect } from "react";
+import { Router, withRouter } from "next/router";
 
 function MyApp({ Component, pageProps, router }) {
-  //router = useRouter();
+  
   /* nprogress */
   useEffect(() => {
     const handleRouteStart = () => {
