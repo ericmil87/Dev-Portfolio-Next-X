@@ -5,6 +5,7 @@ import {
   GetStaticPropsContext,
   NextPage,
 } from "next";
+import Link from "next/link";
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../data";
 import { Service } from "../types";
@@ -26,19 +27,26 @@ const About: NextPage = () => {
       I have been leading digital projects for over a decade, working with in-office or home-office teams around the world that way I am able to escale and manage your IT team and Projects.
       </p>
       </div>
-      <div className="flex items-center justify-end gap-4 -mx-2 ">
-        <a href="#_" className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-2s fill-mode-backwards  ">
-          <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-          <span className="relative text-sky-900 dark:text-sky-200  transition duration-300 group-hover:text-white ease">CHECK OUT MY PROJECTS</span>
-        </a>
-        <a href="#_" className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-1.5s fill-mode-backwards ">
+      
+      <div className=" lg:flex items-center justify-center lg:justify-end gap-4 -mx-2 ">
+        <Link href="/projects">
+          <a  className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-2s fill-mode-backwards  ">
+            <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+            <span className="relative text-sky-900 dark:text-sky-200  transition duration-300 group-hover:text-white ease">CHECK OUT MY PROJECTS</span>
+          </a>
+        </Link>
+        <Link href="/resume">
+        <a  className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-1.5s fill-mode-backwards ">
           <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
           <span className="relative text-sky-900 dark:text-sky-200 transition duration-300 group-hover:text-white ease">DOWNLOAD RESUME</span>
         </a>
-        <a href="#_" className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide  animate-in slide-in-from-left fade-in  duration-1000 delay-1s fill-mode-backwards">
+        </Link>
+        <Link href="/contact">
+        <a className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide  animate-in slide-in-from-left fade-in  duration-1000 delay-1s fill-mode-backwards">
           <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
           <span className="relative text-sky-900 dark:text-sky-200 transition duration-300 group-hover:text-white ease">CONTACT ME</span>
         </a>
+        </Link>
       </div>
       <div
         className="flex-grow p-4 mt-5 -mx-6  "
