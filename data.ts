@@ -48,7 +48,7 @@ export const languages: Skill[] = [
   {
     Icon: BsCircleFill,
     name: "Python",
-    level: "45",
+    level: "75",
   },
   {
     Icon: BsCircleFill,
