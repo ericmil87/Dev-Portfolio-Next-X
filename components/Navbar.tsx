@@ -26,34 +26,10 @@ const NavItem: FunctionComponent<{
    router: Router;
  }*/
 const Navbar = ({router}:any) => {
-   //const router = useRouter();
-
+   
+   
    const [active, setActive] : any = useState('');
    
-   //TODO: This menu active
-   /*
-   useEffect(() => {
-      
-      if (router.pathname === '/') setActive('About')
-      else if (router.pathname === '/projects') setActive('Projects')
-      else if (router.pathname === '/resume') setActive('Resume')
-      else setActive('else')
-      
-      
-      const handleRouteChange = (url) => {
-         console.log('url: '+url);
-         console.log('pathname: '+router.pathname);
-         if (router.pathname === '/') setActive('About')
-         else if (router.pathname === '/projects') setActive('Projects')
-         else if (router.pathname === '/resume') setActive('Resume')
-      }
-
-
-      router.events.on('hashChangeComplete', handleRouteChange);
-      
-   }, []);
-   console.log('useEffect2: '+router.events);
-   */
 
    /* new handler */
    
@@ -72,9 +48,6 @@ const Navbar = ({router}:any) => {
                               else setActive('EYES')
                               
                                     };
-      //const handleRouteDone = () => NProgress.done();
-
-      //Router.events.on("routeChangeStart", handleRouteStart);
       Router.events.on("routeChangeComplete", handleRouteEnd);
       Router.events.on("routeChangeError", handleRouteEnd);
       

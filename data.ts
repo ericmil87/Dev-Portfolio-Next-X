@@ -100,6 +100,8 @@ export const tools: Skill[] = [
   },
 ];
 
+
+
 export const projects: IProject[] = [
   { 
     name: "COVID Tracker",

@@ -23,3 +23,10 @@ export interface IProject {
 }
 
 export type Category = "react" | "node" | "express" | "django" | "mongo";
+
+export interface IEmail {
+  name?: string;
+  phone?: string;
+  email?: string;
+  message?: string;
+}

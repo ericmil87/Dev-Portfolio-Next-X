@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import NProgress from "nprogress"
 import "../styles/nprogress.css";
 
+import { Toaster } from "react-hot-toast";
 
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
@@ -98,7 +99,9 @@ function MyApp({ Component, pageProps, router }) {
                         filter bg-opacity-20 backdrop-blur-xl">
           {/* //!navbar */}
           <Navbar router={router} />
-          {/* //!about */}
+          {/* //!Toaster */}
+          <Toaster position="bottom-center" />
+          {/* //!pages */}
           <Component {...pageProps} />
         </div>
       </div>
