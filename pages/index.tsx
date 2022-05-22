@@ -15,16 +15,13 @@ const About: NextPage = () => {
 
   return (
     <div className="flex flex-col flex-grow px-6 pt-1 bg-gray-400 dark:bg-dark-100 filter bg-opacity-50  ">
-      <div className="container animate-in  fade-in  duration-1000 delay-0.5s fill-mode-backwards">
-      <h6 className="my-3 text-xl font-medium">
-        Over 20 years of experience working on Web Developement.
+      <div className="lg:flex lg:gap-5 lg:-ml-4 animate-in  fade-in  duration-1000 delay-0.5s fill-mode-backwards">
+      <p className="text-9xl text-sky-200 text-center animate-pulse ">Hi!</p>  
+      <h6 className="my-3 text-xl font-medium text-center">
+       I'm Eric Milfont, a Senior Full Stack Web Developer with more than 20 years of experience.
       </h6>
-      <p className="my-3 h-full text-lg w-full justify-start  font-medium ">
-      I can develop and guarantee the high availability in the cloud of digital products, as well as I know Digital Marketing and how to set up digital campaigns, create and manage ads, sales funnels, etc.
-      <br/>
-      I love to innovate and think “outside the box”. I founded more than 3 startups that received several awards and investments.
-      <br/>
-      I have been leading digital projects for over a decade, working with in-office or home-office teams around the world that way I am able to escale and manage your IT team and Projects.
+      <p className="my-3 h-full text-lg w-full  text-center  font-medium ">
+      I can develop and guarantee high availability of your digital products.
       </p>
       </div>
       
@@ -49,11 +46,11 @@ const About: NextPage = () => {
         </Link>
       </div>
       <div
-        className="flex-grow p-4 mt-5 -mx-6  "
+        className="flex-grow p-4 -mx-6  "
       
       >
         
-        <h4 className="my-3 text-xl font-semibold tracking-wide animate-in slide-in-from-bottom fade-in  duration-1000 delay-2.5s fill-mode-backwards">
+        <h4 className="mb-1 text-center lg:text-left text-xl font-semibold tracking-wide animate-in slide-in-from-bottom fade-in  duration-1000 delay-2.5s fill-mode-backwards">
           What I can do for you
         </h4>
 

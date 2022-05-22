@@ -1,36 +1,10 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import nodemailer from 'nodemailer';
-//import { google } from 'googleapis';
 import * as AWS from "aws-sdk";
 
-
-/*const { OAuth2 } = google.auth;
-
+// Set Admin Email on .env
 const email = process.env.MAILADRESS;
 
-const clientId = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
-const refreshToken = process.env.REFRESH_TOKEN;
-
-const OAuth2_client = new OAuth2(clientId, clientSecret);
-OAuth2_client.setCredentials({ refresh_token: refreshToken });
-
-const accessToken = OAuth2_client.getAccessToken();
-
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    type: 'OAuth2',
-    user: email,
-    clientId,
-    clientSecret,
-    refreshToken,
-    accessToken
-  }
-});
-*/
-const email = process.env.MAILADRESS;
 AWS.config.update({
     accessKeyId: process.env.AWS_ACCESS_KEY,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -44,21 +18,58 @@ AWS.config.getCredentials(function (error) {
 });
 const ses = new AWS.SES({ apiVersion: "2010-12-01" });
 
-// change this to the "to" email that you want
-// const adminMail = "email@portodegalinhas.social";
-
 // Create a transporter of nodemailer
 const transporter = nodemailer.createTransport({
     SES: ses,
 });
-const mailer = ({ senderMail, name, text }) => {
+const mailer = ({ senderMail, name, phone, text }) => {
   const from = `${name} <${senderMail}>`;
   const message = {
     from,
     to: `${email}`,
-    subject: `Nova mensagem de contato - ${name}`,
-    text,
-    replyTo: from
+    subject: `New contact from ${name} | eric.milfont.net`,
+    text: `Hi Eric, below there is a new message from the website.
+
+    Name: ${name} 
+    Email: ${senderMail} 
+    Phone: ${phone} 
+    Message: 
+    ${text} 
+    
+    Sent by contact form on https://eric.milfont.net
+    `,
+    replyTo: `${senderMail}`,
+  };
+
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(message, (error, info) =>
+      error ? reject(error) : resolve(info)
+    );
+  });
+};
+
+const mailerfeedback = ({ senderMail, name, phone, text }) => {
+  const from = `Eric Milfont <eric@milfont.net>`;
+  const message = {
+    from,
+    to: `${senderMail}`,
+    subject: `Your message has been received. | eric.milfont.net`,
+    text: `
+    Hi ${name}, how are you doing?
+    
+    I've just received your message and I will get back to you soon.
+    
+    Have a great day!
+    
+    Best regards,
+    Eric Milfont
+    eric@milfont.net
+    +55 81 98139-2929
+    
+    
+    Sent by contact form on https://eric.milfont.net
+    `,
+    replyTo: `eric@milfont.net`,
   };
 
   return new Promise((resolve, reject) => {
@@ -69,13 +80,15 @@ const mailer = ({ senderMail, name, text }) => {
 };
 
 export default async (req, res) => {
-  const { senderMail, name, content } = req.body;
+  const { senderMail, name, phone, content } = req.body;
 
-  if (senderMail === '' || name === '' || content === '') {
+  if (senderMail === '' || content === '') {
     res.status(403).send();
     return;
   }
 
-  const mailerRes = await mailer({ senderMail, name, text: content });
+  const mailerRes = await mailer({ senderMail, name, phone, text: content });
+  const mailerResFb = await mailerfeedback({ senderMail, name, phone, text: content });
   res.send(mailerRes);
+  res.send(mailerResFb);
 };

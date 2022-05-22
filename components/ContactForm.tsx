@@ -21,21 +21,21 @@ const ContactForm: FunctionComponent<{
         event.preventDefault();
     
         if (!phone || !email || !message) {
-          toast('Please fill up all required fields before sending your message.');
+          toast('Please fill up all the form fields before sending your message.');
           return;
         }
     
         try {
           setLoading(true);
-          console.log (name + ' - ' + phone + ' - ' + email + ' - ' + message )
           await sendContactMail(name, phone, email, message);
           setName('');
           setEmail('');
+          setPhone('');
           setMessage('');
     
           toast('Thank you for your message! I will get back to you soon.');
         } catch (error) {
-          toast('Something wrong happend. Please send your message to: eric@milfont.net');
+          toast('Our server is currently not sending e-mail. Please send your message direct to eric@milfont.net');
         } finally {
           setLoading(false);
         }

@@ -31,7 +31,7 @@ const Sidebar = () => {
           width="512px"
           layout="intrinsic"
           quality="100"
-          
+          priority
         />
       </div>
       <div className="bg-sky-900 -mt-1.5 py-2 filter backdrop-blur-xl bg-opacity-60 animate-in slide-in-from-bottom fade-in  duration-1000 delay-1s fill-mode-backwards" >
@@ -61,12 +61,13 @@ const Sidebar = () => {
       </div> 
       <div className="container -mt-3 animate-in slide-in-from-bottom zoom-in duration-1000 delay-2s fill-mode-backwards "> 
         <div className="container my-10 uppercase text-lg">
-        
-          <a href="#_" className="relative px-12 py-4 tracking-wider text-white rounded-lg group ">
-            <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
-            <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-500 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
-            <span className="relative">Hire now!</span>
-          </a>
+          <Link href="/contact#main">
+            <a className="relative px-12 py-4 tracking-wider text-white rounded-lg group ">
+              <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
+              <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-500 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
+              <span className="relative">Hire now!</span>
+            </a>
+          </Link>
         </div>
         
         
