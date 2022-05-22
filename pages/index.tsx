@@ -32,19 +32,19 @@ const About: NextPage = () => {
         <Link href="/projects">
           <a  className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-2s fill-mode-backwards  ">
             <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-            <span className="relative text-sky-900 dark:text-sky-200  transition duration-300 group-hover:text-white ease">CHECK OUT MY PROJECTS</span>
+            <span className="relative text-sky-200 dark:text-sky-200  transition duration-300 group-hover:text-white ease">CHECK OUT MY PROJECTS</span>
           </a>
         </Link>
         <Link href="/resume">
         <a  className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-1.5s fill-mode-backwards ">
           <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-          <span className="relative text-sky-900 dark:text-sky-200 transition duration-300 group-hover:text-white ease">DOWNLOAD RESUME</span>
+          <span className="relative text-sky-200 dark:text-sky-200 transition duration-300 group-hover:text-white ease">DOWNLOAD RESUME</span>
         </a>
         </Link>
         <Link href="/contact">
         <a className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide  animate-in slide-in-from-left fade-in  duration-1000 delay-1s fill-mode-backwards">
           <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-          <span className="relative text-sky-900 dark:text-sky-200 transition duration-300 group-hover:text-white ease">CONTACT ME</span>
+          <span className="relative text-sky-200 dark:text-sky-200 transition duration-300 group-hover:text-white ease">CONTACT ME</span>
         </a>
         </Link>
       </div>

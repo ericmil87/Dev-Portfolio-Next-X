@@ -4,7 +4,7 @@
 
 body {
    font-family: 'Ubuntu', verdana, sans-serif;
-   color: #134d65;
+   @apply text-sky-100;
 }
 /* animate hero bg */
 .background-animate {
@@ -51,7 +51,7 @@ body {
    z-index: -10;
 }
 /*TODO ACTIVATE ANIMATION*/
-.circles li{
+.deac-circles li{
    position: absolute;
    display: block;
    list-style: none;

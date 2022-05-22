@@ -1,6 +1,6 @@
 
 import ContactForm from "../components/ContactForm";
-
+import { SiUpwork, SiFiverr, SiMinutemailer, SiWhatsapp } from "react-icons/si";
 
 const Contact = () => {
   return (
@@ -19,11 +19,13 @@ const Contact = () => {
           </div>
         </div>
         <div className="bg-sky-900 rounded p-4">
-          <h5 className=" text-2xl font-bold">Hire me</h5>
-          <div className="">
-            <p className="">Upwork</p>
-            <p className="">Fiverr</p>
-            <p className="">Contact form</p>
+          <h5 className=" text-2xl font-bold mb-2">Hire me </h5>
+          <div className="flex flex-cols lg:justify-between  gap-4 items-center font-xl">
+          
+            <div className="rounded border-2 border-sky-500 hover:border-white p-4"><SiUpwork className="w-8 h-8 " /></div>
+            <div className="rounded border-2 border-sky-500 hover:border-white p-4"><SiFiverr className="w-8 h-8  " /></div>
+            <div className="rounded border-2 border-sky-500 hover:border-white p-4"><SiWhatsapp className="w-8 h-8  " /></div>
+            <div className="rounded border-2 border-sky-500 hover:border-white p-4"><SiMinutemailer className="w-8 h-8  " /></div>
           </div>
         </div>
       </div>

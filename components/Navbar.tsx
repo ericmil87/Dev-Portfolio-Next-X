@@ -38,6 +38,7 @@ const Navbar = ({router}:any) => {
                               if (router.pathname == '/')  setActive('About')
                               else if (router.pathname == '/projects') setActive('Projects')
                               else if (router.pathname == '/resume') setActive('Resume')
+                              else if (router.pathname == '/contact') setActive('Contact')
                               
                               
       const handleRouteEnd = () => {
@@ -45,8 +46,7 @@ const Navbar = ({router}:any) => {
                               if (router.pathname == '/')  setActive('About')
                               else if (router.pathname == '/projects') setActive('Projects')
                               else if (router.pathname == '/resume') setActive('Resume')
-                              else setActive('EYES')
-                              
+                              else if (router.pathname == '/contact') setActive('Contact')
                                     };
       Router.events.on("routeChangeComplete", handleRouteEnd);
       Router.events.on("routeChangeError", handleRouteEnd);
@@ -85,6 +85,12 @@ const Navbar = ({router}:any) => {
                setActive={setActive}
                name='Projects'
                route='/projects#main'
+            />
+             <NavItem
+               active={active}
+               setActive={setActive}
+               name='Contact'
+               route='/contact#main'
             />
          </div>
       </div>
