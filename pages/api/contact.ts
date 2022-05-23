@@ -1,26 +1,26 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 import * as AWS from "aws-sdk";
 
 // Set Admin Email on .env
 const email = process.env.MAILADRESS;
 
 AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: process.env.AWS_REGION,
+  accessKeyId: process.env.AWS_ACCESS_KEY_MAIL,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY_MAIL,
+  region: process.env.AWS_REGION_MAIL,
 });
 
 AWS.config.getCredentials(function (error) {
-    if (error) {
-        console.log('ERROR:getCredentials: '+ error.stack);
-    }
+  if (error) {
+    console.log("ERROR:getCredentials: " + error.stack);
+  }
 });
 const ses = new AWS.SES({ apiVersion: "2010-12-01" });
 
 // Create a transporter of nodemailer
 const transporter = nodemailer.createTransport({
-    SES: ses,
+  SES: ses,
 });
 const mailer = ({ senderMail, name, phone, text }) => {
   const from = `${name} <${senderMail}>`;
@@ -82,13 +82,18 @@ const mailerfeedback = ({ senderMail, name, phone, text }) => {
 export default async (req, res) => {
   const { senderMail, name, phone, content } = req.body;
 
-  if (senderMail === '' || content === '') {
+  if (senderMail === "" || content === "") {
     res.status(403).send();
     return;
   }
 
   const mailerRes = await mailer({ senderMail, name, phone, text: content });
-  const mailerResFb = await mailerfeedback({ senderMail, name, phone, text: content });
+  const mailerResFb = await mailerfeedback({
+    senderMail,
+    name,
+    phone,
+    text: content,
+  });
   res.send(mailerRes);
   res.send(mailerResFb);
 };
