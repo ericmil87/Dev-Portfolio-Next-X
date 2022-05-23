@@ -94,6 +94,5 @@ export default async (req, res) => {
     phone,
     text: content,
   });
-  res.send(mailerRes);
   res.send(mailerResFb);
 };
