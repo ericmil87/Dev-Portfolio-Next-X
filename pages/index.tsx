@@ -16,40 +16,52 @@ const About: NextPage = () => {
   return (
     <div className="flex flex-col flex-grow px-6 pt-1 bg-gray-400 dark:bg-dark-100 filter bg-opacity-50  ">
       <div className="lg:flex lg:gap-5 lg:-ml-4 animate-in  fade-in  duration-1000 delay-0.5s fill-mode-backwards">
-      <p className="text-9xl text-sky-200 text-center animate-pulse ">Hi!</p>  
-      <h6 className="my-3 text-xl font-medium text-center">
-       I'm Eric Milfont, a Senior Full Stack Web Developer with more than 20 years of experience.
-      </h6>
-      <p className="my-3 h-full text-lg w-full  text-center  font-medium ">
-      I can develop and guarantee high availability of your digital products.
-      </p>
+        <p className="text-9xl text-sky-200 text-center animate-pulse ">Hi!</p>
+        <h6 className="my-3 text-xl font-medium text-center">
+          I'm Eric Milfont, a Senior Full Stack Web Developer with more than 20
+          years of experience.
+        </h6>
+        <p className="my-3  text-lg w-full  text-center  font-medium ">
+          I can develop and guarantee high availability of your digital
+          products.
+        </p>
+        <p className="my-3  text-lg w-full  text-center  font-medium ">
+          Do you need a brand new Website or WebApp?
+          <br />
+          <Link href="/contact#main">
+            <a className="hover:text-sky-200 hover:text-xl">Get in touch</a>
+          </Link>
+          .
+        </p>
       </div>
-      
+
       <div className=" lg:flex items-center justify-center lg:justify-end gap-4 -mx-2 ">
         <Link href="/projects">
-          <a  className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-2s fill-mode-backwards  ">
+          <a className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-2s fill-mode-backwards  ">
             <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-            <span className="relative text-sky-200 dark:text-sky-200  transition duration-300 group-hover:text-white ease">CHECK OUT MY PROJECTS</span>
+            <span className="relative text-sky-200 dark:text-sky-200  transition duration-300 group-hover:text-white ease">
+              CHECK OUT MY PROJECTS
+            </span>
           </a>
         </Link>
         <Link href="/resume">
-        <a  className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-1.5s fill-mode-backwards ">
-          <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-          <span className="relative text-sky-200 dark:text-sky-200 transition duration-300 group-hover:text-white ease">DOWNLOAD RESUME</span>
-        </a>
+          <a className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide animate-in slide-in-from-left fade-in  duration-1000 delay-1.5s fill-mode-backwards ">
+            <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+            <span className="relative text-sky-200 dark:text-sky-200 transition duration-300 group-hover:text-white ease">
+              DOWNLOAD RESUME
+            </span>
+          </a>
         </Link>
         <Link href="/contact">
-        <a className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide  animate-in slide-in-from-left fade-in  duration-1000 delay-1s fill-mode-backwards">
-          <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-          <span className="relative text-sky-200 dark:text-sky-200 transition duration-300 group-hover:text-white ease">CONTACT ME</span>
-        </a>
+          <a className="block mt-2 lg:flex rounded-md px-3.5 py-2  overflow-hidden relative group cursor-pointer border-2 font-medium border-sky-500 text-sky-900 tracking-wide  animate-in slide-in-from-left fade-in  duration-1000 delay-1s fill-mode-backwards">
+            <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-sky-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+            <span className="relative text-sky-200 dark:text-sky-200 transition duration-300 group-hover:text-white ease">
+              CONTACT ME
+            </span>
+          </a>
         </Link>
       </div>
-      <div
-        className="flex-grow p-4 -mx-6  "
-      
-      >
-        
+      <div className="flex-grow p-4 -mx-6  ">
         <h4 className="mb-1 text-center lg:text-left text-xl font-semibold tracking-wide animate-in slide-in-from-bottom fade-in  duration-1000 delay-2.5s fill-mode-backwards">
           What I can do for you
         </h4>

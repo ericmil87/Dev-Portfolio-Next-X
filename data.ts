@@ -1,6 +1,10 @@
 import { RiComputerLine } from "react-icons/ri";
-import { FaServer } from "react-icons/fa";
-import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
+import { FaServer, FaUbuntu } from "react-icons/fa";
+import { MdOutlineDesignServices } from "react-icons/md";
+
+import { CgWebsite } from "react-icons/cg";
+import { HiAcademicCap } from "react-icons/hi";
+
 import { MdDeveloperMode } from "react-icons/md";
 import { IProject, Service, Skill } from "./types";
 
@@ -11,36 +15,37 @@ export const services: Service[] = [
     Icon: RiComputerLine,
     title: "Frontend Development",
     about:
-      "I can build a beautiful and scalable serverless Website or WebApp(SPA) using <b> NEXT.JS, HTML</b>,<b>CSS</b> and <b>MySQL, MongoDB or any cloud database of your choice. </b> ",
+      "I can build a beautiful and scalable serverless Website or WebApp(SPA) using <b>NEXT.JS</b>, <b>HTML</b>, <b>CSS</b>.",
   },
   {
     Icon: FaServer,
     title: "Backend Development",
     about:
-      "Create and optimize your Database, Server or RESTFul API",
+      "I can create and optimize your Database, Server or API using <b>NEXT.JS, Python or PHP. I can work with MySQL, MongoDB or any cloud database of your choice",
   },
   {
-    Icon: AiOutlineApi,
-    title: "Website Development",
+    Icon: CgWebsite,
+    title: "Speedy Website Development",
     about:
-      "I will develop your beautiful and scalable website with any feature you want like e-commerce, booking, sign up, event or blog.",
+      "I will develop your beautiful, fast and scalable website with any feature you want like e-commerce, booking, sign up, event and blog.",
   },
   {
-    Icon: MdDeveloperMode,
-    title: "Linux Server Administration",
-    about: "I can manage, secure, optimize and mantain your Linux Server and your App/Sites on it.",
+    Icon: FaUbuntu,
+    title: "Webmaster and Server Administration",
+    about:
+      "I can manage, secure, optimize and mantain your Linux Server and your App/Sites on it.",
   },
   {
-    Icon: AiOutlineAntDesign,
+    Icon: MdOutlineDesignServices,
     title: "Branding and Web Designer",
     about:
-      "I work with excellent designers to delivery you any kind of digital art you need. Including Websites design, Logo, E-mail signatures and more.",
+      "I work with excellent designers partners to delivery you any kind of digital art you need. Including Websites design, Logo, E-mail signatures and more.",
   },
   {
-    Icon: RiComputerLine,
+    Icon: HiAcademicCap,
     title: "20+ Years of Experience",
     about:
-      "Born on 1987, I've been working with development since I was 10 years old. I have tons of experience with programming and I.T. in general. I would love to hear about your project.",
+      "Born on 1987, I've been programming since I was 10 years old. I have tons of experience with programming and I would love to hear about your idea or project.",
   },
 ];
 
@@ -100,10 +105,8 @@ export const tools: Skill[] = [
   },
 ];
 
-
-
 export const projects: IProject[] = [
-  { 
+  {
     name: "COVID Tracker",
     description:
       "This app shows a statistical view about corona virus over the world",
