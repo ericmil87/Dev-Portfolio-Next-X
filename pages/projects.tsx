@@ -24,7 +24,7 @@ const Projects = () => {
 
   return (
     <div className="w-full">
-      <div className="px-5 py-2 overflow-y-scroll h-full">
+      <div className="px-5 py-2 h-full">
         <ProjectsNavbar
           handlerFilterCategory={handlerFilterCategory}
           active={active}

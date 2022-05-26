@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import "../styles/globals.css";
-import NProgress from "nprogress"
+import NProgress from "nprogress";
 import "../styles/nprogress.css";
 
 import { Toaster } from "react-hot-toast";
@@ -11,17 +11,16 @@ import { useEffect } from "react";
 import { Router, withRouter } from "next/router";
 
 function MyApp({ Component, pageProps, router }) {
-  
   /* nprogress */
   useEffect(() => {
     const handleRouteStart = () => {
-                                    NProgress.start();
-                                    //console.log('NP.handleRouteStart: '+ router.pathname);
-    }
+      NProgress.start();
+      //console.log('NP.handleRouteStart: '+ router.pathname);
+    };
     const handleRouteDone = () => {
-                                    NProgress.done();
-                                   // console.log('NP.handleRouteDone: '+ router.pathname);
-    }
+      NProgress.done();
+      // console.log('NP.handleRouteDone: '+ router.pathname);
+    };
 
     Router.events.on("routeChangeStart", handleRouteStart);
     Router.events.on("routeChangeComplete", handleRouteDone);
@@ -44,10 +43,9 @@ function MyApp({ Component, pageProps, router }) {
   */
   return (
     <ThemeProvider defaultTheme="light" attribute="class">
-      
-      <div className="grid grid-cols-12 gap-6 px-5 my-3 lg:mb-0 md:mb-16 sm:px-2 md:px-3 lg:px-10 xl:px-20 ">
-      {/*TODO BURGUER ICON*/}
-      {/*<button className="fixed hidden mx-auto mt-4 opacity-80 hover:opacity-100 inset-0 justify-center  w-10 h-10  rounded z-10 text-white bg-sky-700 font-xl " >
+      <div className="grid grid-cols-12 gap-6 px-5 my-3 lg:mb-0 md:mb-16 sm:px-2 md:px-3 lg:px-10 xl:px-20   ">
+        {/*TODO BURGUER ICON*/}
+        {/*<button className="fixed hidden mx-auto mt-4 opacity-80 hover:opacity-100 inset-0 justify-center  w-10 h-10  rounded z-10 text-white bg-sky-700 font-xl " >
         <svg
             className='w-10 h-10'
             fill='none'
@@ -62,8 +60,9 @@ function MyApp({ Component, pageProps, router }) {
               d='M4 6h16M4 12h16M4 18h16'
             />
           </svg></button>*/}
-        
-        <div className={`h-full 
+
+        <div
+          className={`h-full 
                         col-span-12 
                         p-0 
                         
@@ -78,13 +77,14 @@ function MyApp({ Component, pageProps, router }) {
                         
                         dark:shadow-custom-dark  
                         animate-in zoom-in fade-in
-                        filter backdrop-blur-xl bg-opacity-20`}>
-        
-        
+                        filter backdrop-blur-xl bg-opacity-20`}
+        >
           {/* //!sidebar */}
           <Sidebar />
         </div>
-        <div id="main" className="flex 
+        <div
+          id="main"
+          className="flex 
                         flex-col 
                         col-span-12   
                         overflow-hidden 
@@ -96,13 +96,18 @@ function MyApp({ Component, pageProps, router }) {
                         animate-in zoom-in fade-in
                         lg:col-span-9 
                         dark:bg-dark-500  
-                        filter bg-opacity-20 backdrop-blur-xl">
+                        filter bg-opacity-20 backdrop-blur-xl"
+        >
           {/* //!navbar */}
           <Navbar router={router} />
           {/* //!Toaster */}
-          <Toaster position="bottom-center" />
+          <div className="mb-6">
+            <Toaster position="bottom-center" />
+          </div>
           {/* //!pages */}
-          <Component {...pageProps} />
+          <div className=" lg:max-h-[85vh] lg:overflow-y-auto  scrollbar-thin scrollbar- scrollbar-thumb-sky-600 scrollbar-track-sky-900 hover:scrollbar-thumb-sky-500 dark:scrollbar-thumb-sky-900 dark:scrollbar-track-gray-900 dark:hover:scrollbar-thumb-sky-800">
+            <Component {...pageProps} />
+          </div>
         </div>
       </div>
     </ThemeProvider>

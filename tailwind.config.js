@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
@@ -21,16 +21,15 @@ module.exports = {
         "2s": "2s",
         "2.5s": "2.5s",
         "3s": "3s",
-				"4s": "4s",
-
-			},
+        "4s": "4s",
+      },
       backdropBlur: {
-        xl: '5px',
+        xl: "5px",
       },
       colors: {
         green: {
           DEFAULT: colors.sky.DEFAULT,
-        }, 
+        },
         dark: {
           DEFAULT: "#010101",
           100: "#0a0b0e",
@@ -50,8 +49,9 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
+    require("tailwindcss"),
+    require("autoprefixer"),
     require("tailwindcss-animate"),
+    require("tailwind-scrollbar"),
   ],
 };
