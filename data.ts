@@ -1,15 +1,77 @@
 import { RiComputerLine } from "react-icons/ri";
-import { FaServer, FaUbuntu } from "react-icons/fa";
+import {
+  FaServer,
+  FaUbuntu,
+  FaReact,
+  FaWordpress,
+  FaPython,
+  FaAws,
+  FaBootstrap,
+} from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
-
+import {
+  SiDocker,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
+DiLinux;
+import { DiLinux } from "react-icons/di";
 import { CgWebsite } from "react-icons/cg";
 import { HiAcademicCap } from "react-icons/hi";
 
 import { MdDeveloperMode } from "react-icons/md";
-import { IProject, Service, Skill } from "./types";
+import { IProject, Service, Skill, Stack } from "./types";
 
 import { BsCircleFill } from "react-icons/bs";
 
+export const stacks: Stack[] = [
+  {
+    Icon: FaReact,
+    title: "React",
+  },
+  {
+    Icon: FaWordpress,
+    title: "Wordpress",
+  },
+  {
+    Icon: SiNextdotjs,
+    title: "Next.JS",
+  },
+  {
+    Icon: FaPython,
+    title: "Python",
+  },
+  {
+    Icon: SiMysql,
+    title: "MySQL",
+  },
+  {
+    Icon: SiMongodb,
+    title: "MongoDB",
+  },
+  {
+    Icon: SiDocker,
+    title: "Docker",
+  },
+  {
+    Icon: DiLinux,
+    title: "Linux",
+  },
+  {
+    Icon: SiTailwindcss,
+    title: "TailwindCSS",
+  },
+  {
+    Icon: FaBootstrap,
+    title: "Bootstrap",
+  },
+  {
+    Icon: FaAws,
+    title: "AWS",
+  },
+];
 export const services: Service[] = [
   {
     Icon: RiComputerLine,

@@ -5,6 +5,10 @@ export interface Service {
   title: string;
   about: string;
 }
+export interface Stack {
+  Icon: IconType;
+  title: string;
+}
 
 export interface Skill {
   Icon: IconType;
