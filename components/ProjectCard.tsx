@@ -42,11 +42,16 @@ const ProjectCard: FunctionComponent<{
             <p className="my-2 text-center tracking-wider text-base">
               {description}
             </p>
+
+            <p className="my-2 text-center tracking-wider text-base text-gray-200">
+              {deployed_url}
+            </p>
+
             <div className="relative grid grid-cols-2 gap-4 my-3 ">
               {key_techs.map((tech) => (
                 <div
                   key={tech}
-                  className="bg-cyan-800 p-2 rounded-lg text-center dark:bg-dark-200"
+                  className="bg-cyan-800 p-2 rounded-lg text-center dark:bg-gray-700"
                 >
                   {tech}
                 </div>
