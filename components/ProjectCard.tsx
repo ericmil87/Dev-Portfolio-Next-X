@@ -29,8 +29,8 @@ const ProjectCard: FunctionComponent<{
               alt={name}
               className="cursor-pointer"
               layout="responsive"
-              height="150"
-              width="300"
+              height="250"
+              width="350"
             />
             {/* <img
         src={image_path}
@@ -42,6 +42,16 @@ const ProjectCard: FunctionComponent<{
             <p className="my-2 text-center tracking-wider text-base">
               {description}
             </p>
+            <div className="relative grid grid-cols-2 gap-4 my-3 ">
+              {key_techs.map((tech) => (
+                <div
+                  key={tech}
+                  className="bg-cyan-800 p-2 rounded-lg text-center dark:bg-dark-200"
+                >
+                  {tech}
+                </div>
+              ))}
+            </div>
           </a>
         </Link>
       </div>

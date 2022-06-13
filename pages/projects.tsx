@@ -34,7 +34,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.name}
-              className="col-span-12 p-2 bg-sky-900 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200"
+              className="col-span-12 p-2 bg-sky-900 rounded-lg sm:col-span-6 lg:col-span-6 dark:bg-dark-200"
             >
               <ProjectCard project={project} key={project.name} />
             </div>
