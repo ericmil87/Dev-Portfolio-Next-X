@@ -80,15 +80,6 @@ const Sidebar = () => {
         </div>
 
         <div className="container my-10 uppercase ">
-          <Link href="/contact#main">
-            <a className="relative px-11 py-4 tracking-wider text-white rounded-lg group">
-              <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
-              <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-700 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
-              <span className="relative">Contact me</span>
-            </a>
-          </Link>
-        </div>
-        <div className="container my-10 uppercase ">
           <Link href="/resume#main">
             <a className="relative px-16 py-4 tracking-wider text-white rounded-lg group">
               <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
@@ -106,7 +97,15 @@ const Sidebar = () => {
             </a>
           </Link>
         </div>
-
+        <div className="container my-10 uppercase ">
+          <Link href="/contact#main">
+            <a className="relative px-11 py-4 tracking-wider text-white rounded-lg group">
+              <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-sky-800 dark:bg-gray-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 rounded-lg "></span>
+              <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-cyan-700 dark:bg-gray-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen rounded-lg"></span>
+              <span className="relative">Contact me</span>
+            </a>
+          </Link>
+        </div>
         <div className="container max-w-screen-lg mx-auto mb-4">
           <div>
             <div className="flex flex-wrap justify-center gap-2">
