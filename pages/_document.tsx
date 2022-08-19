@@ -12,6 +12,12 @@ class MyDocument extends Document {
           />
           <title>Eric Milfont Full Stack Web Developer Portfolio</title>
           <link rel="icon" href="/favicon.ico" />
+          <meta
+            property="og:title"
+            content="Eric Milfont Full Stack Web Developer Portfolio"
+            key="title"
+          />
+
           <meta charSet="utf-8"></meta>
           <meta
             name="viewport"
