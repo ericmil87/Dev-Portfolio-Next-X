@@ -169,6 +169,16 @@ export const tools: Skill[] = [
 
 export const projects: IProject[] = [
   {
+    name: "Artificial Intelligency for creating recipes",
+    description:
+      "Generate your next recipe in seconds. Powered by OpenAI and Vercel Edge Functions.",
+    image_path: "/images/recipesai.png",
+    deployed_url: "https://recipesai.vercel.app/",
+    github_url: "",
+    category: ["nextjs"],
+    key_techs: ["Next.JS", "Vercel Edge Functions", "OpenAI", "ChatGPT"],
+  },
+  {
     name: "Wordpress Company Website with Lead capture and SEO",
     description:
       "A good looking website for a company with a form to get leads",
